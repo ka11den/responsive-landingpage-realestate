@@ -66,6 +66,7 @@ html {
 }
 
 button, input {
+  cursor: pointer;
   border: none;
   background: none;
 }
@@ -85,6 +86,11 @@ button, body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--title-color);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: rgba(255, 255, 255, 0.0);
 }
 
 body {
@@ -225,6 +231,10 @@ body {
   opacity: 1;
 }
 
+.active {
+  color: var(--btn-bg);
+}
+
 .nav__close {
   position: absolute;
   top: 2rem;
@@ -260,15 +270,16 @@ body {
 }
 
 .home__img {
+  transform: translateY(10px);
   animation: home-img 5s infinite ease-in-out;  
 }
 
 @keyframes home-img {
   0% {
-    transform: translateY(-2px);
+    transform: translateY(-10px);
   }
   100% {
-    transform: translateY(2px);
+    transform: translateY(10px);
   }
 }
 
@@ -444,6 +455,21 @@ body {
   margin-bottom: 1rem;
 }
 
+.reviews__title-box {
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+
+  column-gap: .75rem;
+}
+
+.reviews__title-box div {
+  padding: .2rem .4rem;
+  transform: rotate(2deg);
+  
+  background-color: var(--btn-bg);
+}
+
 .reviews__btn {
   margin-top: 1rem;
 }
@@ -512,6 +538,9 @@ body {
     gap: 1.5rem;
     grid-template-columns: repeat(2, auto);
   }
+  .reviews__container, .about__container  {
+    padding-top: 4rem
+  }  
   .sales__card-container {
     margin: 0 auto;
     display: grid;
@@ -521,6 +550,10 @@ body {
   .reviews__card-container, .about__container {
     display: grid;
     grid-template-columns: repeat(2, auto);
+  }
+  .home__article-btn svg, .sales__btn svg, .reviews__btn svg {
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -574,7 +607,7 @@ body {
 }
 
 @media screen and (max-width: 300px) {
-  .home__title-box {
+  .home__title-box, .reviews__title-box {
     display: grid;
   }
   .home__article-btn, .sales__btn, .reviews__btn {

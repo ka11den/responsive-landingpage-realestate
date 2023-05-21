@@ -19,16 +19,16 @@
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#" class="nav__link">Главная</a>
+            <a href="#home" class="nav__link">Главная</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">О нас</a>
+            <a href="#about" class="nav__link">О нас</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Продажи</a>
+            <a href="#sales" class="nav__link">Продажи</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Отзывы</a>
+            <a href="#reviews" class="nav__link">Отзывы</a>
           </li>
         </ul>
 
@@ -79,9 +79,10 @@
             <p class="home__desc-card">
               15000
             </p>
-            <button class="home__article-btn">
+            <a href="#sales" class="home__article-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z"></path></svg>
               Искать
-            </button>
+            </a>
           </div>
         </article>
       </div>
@@ -129,7 +130,7 @@
     </div>
   </section>
 
-  <section class="sales section">
+  <section class="sales section" id="sales">
     <h1 class="section__title">ПРОДАЖИ</h1>
     <div class="sales__container container grid">
       
@@ -204,12 +205,14 @@
     </div>
   </section>
 
-  <section class="reviews section">
+  <section class="reviews section" id="reviews">
     <h1 class="section__title">ОТЗЫВЫ</h1>
     <div class="reviews__container container">
       <div class="reviews__data">
         <h1 class="reviews__title">
-          Отзывы наших <br>
+          <div class="reviews__title-box">
+            <div>Отзывы</div> наших <br>
+          </div>
           клиентов
         </h1>
         <p class="reviews__desc">
