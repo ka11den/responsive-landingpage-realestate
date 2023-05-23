@@ -278,9 +278,12 @@ body {
   0% {
     transform: translateY(-10px);
   }
-  100% {
+  50% {
     transform: translateY(10px);
   }
+  100% {
+    transform: translateY(-10px);
+  }  
 }
 
 .home__title-box {
@@ -352,6 +355,7 @@ body {
 .home__article-btn svg, .sales__btn svg, .reviews__btn svg {
   width: 25px;
   height: 22px;
+  transition: all .3s;
 }
 
 .home__article-btn:hover,
