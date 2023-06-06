@@ -88,6 +88,17 @@ button, body {
   color: var(--title-color);
 }
 
+hr {
+  background-color: var(--btn-bg);
+  color: var(--btn-bg);
+
+  border: none;
+  
+  width: 2px;
+  border-radius: 15px;
+  height: 50px;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
   background: rgba(255, 255, 255, 0.0);
@@ -305,6 +316,16 @@ body {
   margin-top: 1.5rem;
 }
 
+.home__desc-card {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.home__desc-card svg {
+  width: 20px;
+}
+
 .home__rectangle {
   position: absolute;
   top: .4rem;
@@ -451,7 +472,7 @@ body {
 
 .reviews__card {
   border-radius: 15px;
-  border: 1px solid var(--section-color);
+  border: 2px solid var(--section-color);
 }
 
 .reviews__title {
@@ -496,42 +517,74 @@ body {
 
 /* footer */
 .footer {
-  position: relative;
-  padding: 1rem;
+  padding: 3rem;
   margin-top: 5rem;
-  background-color: var(--footer-bg);
+  background-color: var(--btn-bg);
 }
 
-.nav__logo-footer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.footer__container {
+  position: relative;
+  row-gap: 2rem;
+}
 
-  row-gap: .4rem;
-  margin-bottom: 2rem;
-  
+.footer__logo {
+  display: flex;
+  align-items: center;
+  column-gap: .25rem;
+  color: var(--title-color);
   font-size: var(--logo-font-size);
   font-weight: var(--font-medium);
-  color: var(--footer-color);
 }
 
-.nav__logo-footer svg {
-  margin: 0 auto;
-  width: 30px;
+.footer__logo-img {
+  width: 1.5rem;
+}
+
+.footer__description {
+  color: var(--title-color);
+  margin-top: 1rem;
+}
+
+.footer__logo, 
+.footer__title {
+  font-size: var(--logo-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.footer__links, 
+.footer__aviables {
+  display: flex;
+  flex-direction: column;
+  row-gap: .75rem;
+}
+
+.footer__link {
+  color: var(--title-color);
+  transition: all .4s;
+}
+
+.footer__link:hover {
+  color: var(--body-color);
+}
+
+.footer__aviable-img {
+  width: 100px;
+  cursor: pointer;
+
+  transition: all .4s;
+}
+
+.footer__aviable-img:hover {
   filter: invert(1);
 }
 
-.nav__list-footer {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-
+.footer__copy {
+  display: block;
+  margin: 3.5rem 0 1rem 0;
   text-align: center;
-  color: var(--footer-color);
-}
-
-.nav__link-footer {
-  color: var(--footer-color);
+  
+  font-size: var(--desc-font-size);
+  color: var(--title-color);
 }
 
 /* media */
@@ -542,19 +595,27 @@ body {
     gap: 1.5rem;
     grid-template-columns: repeat(2, auto);
   }
+
+  .footer__container {
+    grid-template-columns: repeat(3, auto);
+  }
+
   .reviews__container, .about__container  {
     padding-top: 4rem
   }  
+
   .sales__card-container {
     margin: 0 auto;
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, auto);
   }
+
   .reviews__card-container, .about__container {
     display: grid;
     grid-template-columns: repeat(2, auto);
   }
+
   .home__article-btn svg, .sales__btn svg, .reviews__btn svg {
     width: 25px;
     height: 25px;
@@ -566,28 +627,46 @@ body {
     display: grid;
     grid-template-columns: repeat(3, auto);
   }
+
+  .home__title {
+    font-size: 3em;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(4, auto);
+  }
 }
 
 @media screen and (min-width: 1400px) {
   .container {
     margin: 0 auto;
+  }  
+
+  .home__title {
+    font-size: 4em;
   }
+  
   .nav__list {
     gap: 4rem;
     flex-direction: row;
   }
+
   .nav__toggle, .nav__close {
     display: none;
   }
+
   .home__container, .sales__container {
     grid-template-columns: repeat(2, auto);
   }
+
   .reviews__card-container, .about__container {
     grid-template-columns: repeat(4, auto);
   }
+
   .sales__card {
     width: 450px;
   }
+
   .sales__card-container {
     display: grid;
     gap: 1rem;
@@ -604,6 +683,7 @@ body {
     --normal-font-size: .1em;
     --logo-font-size: 10em;
   }
+
   .reviews__card-img {
     width: 50px;
     margin-top: -1.5rem;
@@ -614,6 +694,7 @@ body {
   .home__title-box, .reviews__title-box {
     display: grid;
   }
+  
   .home__article-btn, .sales__btn, .reviews__btn {
     align-items: center;
     padding: .4rem 1rem;

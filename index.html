@@ -9,6 +9,7 @@
 </head>
 <body>
 
+  <!-- header -->
   <header class="header">
     <nav class="nav container">
       <a href="#" class="nav__logo">
@@ -19,7 +20,7 @@
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#home" class="nav__link">Главная</a>
+            <a href="#home" class="nav__link active">Главная</a>
           </li>
           <li class="nav__item">
             <a href="#about" class="nav__link">О нас</a>
@@ -44,6 +45,7 @@
     </nav>
   </header>
 
+  <!-- main -->
   <section class="home section" id="home">
     <div class="home__container container grid">
 
@@ -71,14 +73,20 @@
         <article class="home__card">
           <div class="home__card-content">
             <p class="home__desc-card">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364L12 23.7279ZM16.9497 15.9497C19.6834 13.2161 19.6834 8.78392 16.9497 6.05025C14.2161 3.31658 9.78392 3.31658 7.05025 6.05025C4.31658 8.78392 4.31658 13.2161 7.05025 15.9497L12 20.8995L16.9497 15.9497ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z" fill="rgba(141,149,158,1)"></path></svg>
               Астрахань
             </p>
+            <hr>
             <p class="home__desc-card">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 19.9997C21 20.552 20.5523 20.9997 20 20.9997H4C3.44772 20.9997 3 20.552 3 19.9997V9.48882C3 9.18023 3.14247 8.88893 3.38606 8.69947L11.3861 2.47725C11.7472 2.19639 12.2528 2.19639 12.6139 2.47725L20.6139 8.69947C20.8575 8.88893 21 9.18023 21 9.48882V19.9997ZM19 18.9997V9.97791L12 4.53346L5 9.97791V18.9997H19Z" fill="rgba(141,149,158,1)"></path></svg>
               Elite
             </p>
+            <hr>
             <p class="home__desc-card">
+              ₽
               15000
             </p>
+            <hr>
             <a href="#sales" class="home__article-btn">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z"></path></svg>
               Искать
@@ -206,7 +214,6 @@
   </section>
 
   <section class="reviews section" id="reviews">
-    <h1 class="section__title">ОТЗЫВЫ</h1>
     <div class="reviews__container container">
       <div class="reviews__data">
         <h1 class="reviews__title">
@@ -266,37 +273,74 @@
             Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый 
           </p>
         </article>
+
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <nav class="nav-footer container">
-
-      <a href="#" class="nav__logo-footer">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 19.9997C21 20.552 20.5523 20.9997 20 20.9997H4C3.44772 20.9997 3 20.552 3 19.9997V9.48882C3 9.18023 3.14247 8.88893 3.38606 8.69947L11.3861 2.47725C11.7472 2.19639 12.2528 2.19639 12.6139 2.47725L20.6139 8.69947C20.8575 8.88893 21 9.18023 21 9.48882V19.9997ZM19 18.9997V9.97791L12 4.53346L5 9.97791V18.9997H19Z"></path></svg>
-        STAY HOME
-      </a>
-
-      <ul class="nav__list-footer">
-        <li class="nav__item-footer">
-          <a href="#" class="nav__link-footer">Главная</a>
-        </li>
-        <li class="nav__item-footer">
-          <a href="#" class="nav__link-footer">О нас</a>
-        </li>
-        <li class="nav__item-footer">
-          <a href="#" class="nav__link-footer">Продажи</a>
-        </li>
-        <li class="nav__item-footer">
-          <a href="#" class="nav__link-footer">Отзывы</a>
-        </li>
-      </ul>
+  <!-- footer -->
+  <footer class="footer section">
+    <div class="footer__container container grid">
       
-    </nav>
+      <div>
+        <a href="#" class="footer__logo">
+          <svg class="footer__logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 19.9997C21 20.552 20.5523 20.9997 20 20.9997H4C3.44772 20.9997 3 20.552 3 19.9997V9.48882C3 9.18023 3.14247 8.88893 3.38606 8.69947L11.3861 2.47725C11.7472 2.19639 12.2528 2.19639 12.6139 2.47725L20.6139 8.69947C20.8575 8.88893 21 9.18023 21 9.48882V19.9997ZM19 18.9997V9.97791L12 4.53346L5 9.97791V18.9997H19Z"></path></svg>
+          Stay Home
+        </a>
+
+        <p class="footer__description">
+          Найди свой дом <br>
+          уже сейчас
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer__title">Компания</h3>
+
+        <ul class="footer__links">
+          <li>
+            <a href="#about" class="footer__link">О нас</a>
+          </li>
+          <li>
+            <a href="#sales" class="footer__link">Продажи</a>
+          </li>
+          <li>
+            <a href="#reviews" class="footer__link">Отзывы</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__title">Поддержка</h3>
+
+        <ul class="footer__links">
+          <li>
+            <a href="#" class="footer__link">FAQs</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__title">Приложение</h3>
+
+        <div class="footer__aviables">
+          <img class="footer__aviable-img" src="assets/img/aviable1.png" >
+          <img class="footer__aviable-img" src="assets/img/aviable2.png">
+        </div>
+
+        <img src="assets/img/footer1.png" alt="" class="footer__img1">
+        <img src="assets/img/footer2.png" alt="" class="footer__img2">
+      </div>
+    </div>  
+
+    <span class="footer__copy">&#169; StayHome. Все права защищены</span>
   </footer>
 
   <!-- script -->
   <script src="./assets/js/main.js"></script>
+  
 </body>
 </html>
