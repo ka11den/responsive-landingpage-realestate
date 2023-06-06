@@ -89,6 +89,8 @@ button, body {
 }
 
 hr {
+  display: none;
+
   background-color: var(--btn-bg);
   color: var(--btn-bg);
 
@@ -588,14 +590,16 @@ body {
 }
 
 /* media */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 780px) { 
   .home__container, .sales__container {
     display: grid;
     align-items: center;
     gap: 1.5rem;
     grid-template-columns: repeat(2, auto);
   }
+}
 
+@media screen and (min-width: 700px) {  
   .footer__container {
     grid-template-columns: repeat(3, auto);
   }
@@ -623,6 +627,10 @@ body {
 }
 
 @media screen and (min-width: 1000px) {
+  hr {
+    display: flex;
+  }
+
   .reviews__card-container, .about__container {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -698,6 +706,19 @@ body {
   .home__article-btn, .sales__btn, .reviews__btn {
     align-items: center;
     padding: .4rem 1rem;
+  }
+
+  .footer {
+    padding: 0;
+  }
+
+  .footer__logo {
+    margin-top: 2rem;
+  }
+
+  .footer__copy {
+    margin-top: 1rem;
+    margin: 0;
   }
 }
 
